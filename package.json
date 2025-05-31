@@ -1,0 +1,72 @@
+{
+  "name": "eslint-plugin-pnpm-catalog",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.11.0",
+  "description": "eslint plugin to automatically reorganize pnpm catalogs",
+  "author": "onmax",
+  "license": "MIT",
+  "homepage": "https://github.com/onmax/eslint-plugin-pnpm-catalog#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onmax/eslint-plugin-pnpm-catalog.git"
+  },
+  "bugs": "https://github.com/onmax/eslint-plugin-pnpm-catalog/issues",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "pnpm",
+    "pnpm-catalog"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && pnpm publish",
+    "start": "tsx src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "catalog:types",
+    "eslint": "catalog:lint",
+    "find-up-simple": "catalog:node",
+    "jsonc-eslint-parser": "catalog:lint",
+    "pathe": "catalog:node",
+    "pnpm-workspace-yaml": "catalog:prod"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:lint",
+    "@types/node": "catalog:types",
+    "bumpp": "catalog:cli",
+    "eslint-plugin-format": "catalog:lint",
+    "eslint-vitest-rule-tester": "catalog:test",
+    "lint-staged": "catalog:lint",
+    "simple-git-hooks": "catalog:lint",
+    "typescript": "catalog:dev",
+    "unbuild": "catalog:build",
+    "vitest": "catalog:test",
+    "yaml-eslint-parser": "catalog:lint"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
