@@ -9,6 +9,10 @@ catalogs:
     unbuild:
       specifier: ^3.5.0
       version: 3.5.0
+  cli:
+    bumpp:
+      specifier: ^10.1.1
+      version: 10.1.1
   dev:
     typescript:
       specifier: ^5.8.3
@@ -91,7 +95,7 @@ importers:
         specifier: catalog:types
         version: 22.15.29
       bumpp:
-        specifier: ^10.1.1
+        specifier: catalog:cli
         version: 10.1.1
       eslint-plugin-format:
         specifier: catalog:lint
