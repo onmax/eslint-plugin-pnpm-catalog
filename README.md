@@ -19,7 +19,8 @@ ESLint plugin that enforces the use of named catalogs in pnpm workspaces. Automa
 ## Installation
 
 ```bash
-pnpm install --save-dev eslint-plugin-pnpm-catalog
+pnpm add --save-dev eslint-plugin-pnpm-catalog
+
 ```
 
 ## Usage
