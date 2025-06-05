@@ -27,6 +27,9 @@ catalogs:
     eslint-plugin-format:
       specifier: ^1.0.1
       version: 1.0.1
+    eslint-plugin-pnpm:
+      specifier: ^0.3.1
+      version: 0.3.1
     jsonc-eslint-parser:
       specifier: ^2.4.0
       version: 2.4.0
@@ -75,6 +78,9 @@ importers:
       eslint:
         specifier: catalog:lint
         version: 9.28.0(jiti@2.4.2)
+      eslint-plugin-pnpm:
+        specifier: catalog:lint
+        version: 0.3.1(eslint@9.28.0(jiti@2.4.2))
       find-up-simple:
         specifier: catalog:node
         version: 1.0.1

@@ -3,12 +3,15 @@ packages:
 catalogs:
   build:
     unbuild: ^3.5.0
+  cli:
+    bumpp: ^10.1.1
   dev:
     typescript: ^5.8.3
   lint:
     '@antfu/eslint-config': ^4.13.2
     eslint: ^9.28.0
     eslint-plugin-format: ^1.0.1
+    eslint-plugin-pnpm: ^0.3.1
     jsonc-eslint-parser: ^2.4.0
     lint-staged: ^16.1.0
     simple-git-hooks: ^2.13.0
@@ -24,7 +27,5 @@ catalogs:
   types:
     '@types/node': ^22.15.29
     '@typescript-eslint/utils': ^8.33.0
-  cli:
-    bumpp: ^10.1.1
 onlyBuiltDependencies:
   - unrs-resolver

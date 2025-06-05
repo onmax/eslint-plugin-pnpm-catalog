@@ -6,7 +6,7 @@ import { getPnpmWorkspace } from '../utils/workspace'
 
 export type ConflictStrategy = 'new-catalog' | 'overrides' | 'error'
 
-export const RULE_NAME = 'json-enforce-named-catalogs'
+export const RULE_NAME = 'json-enforce-cataloged-dependencies'
 export type MessageIds = 'expectNamedCatalog'
 export type Options = [
   {

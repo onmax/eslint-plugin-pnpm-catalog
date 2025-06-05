@@ -55,6 +55,17 @@ export default [
 
 ## Rules
 
+The recommended configuration enables the following rules in this order:
+
+1. `pnpm-catalog/json-enforce-named-catalogs`
+2. `pnpm/json-enforce-catalog`
+3. `pnpm/json-valid-catalog`
+4. `pnpm/json-prefer-workspace-settings`
+5. `pnpm/yaml-no-unused-catalog-item`
+6. `pnpm/yaml-no-duplicate-catalog-item`
+
+> This plugin is built on top of the [eslint-plugin-pnpm](https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm)
+
 ### `json-enforce-named-catalogs`
 
 Enforces the use of named catalogs instead of plain version specifiers in `package.json` files. This rule helps maintain consistency across your workspace by organizing dependencies into logical catalogs.

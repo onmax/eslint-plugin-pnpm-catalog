@@ -42,6 +42,9 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
+  "peerDependencies": {
+    "eslint-plugin-pnpm": "catalog:lint"
+  },
   "dependencies": {
     "@typescript-eslint/utils": "catalog:types",
     "eslint": "catalog:lint",
