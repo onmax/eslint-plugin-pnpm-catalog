@@ -89,7 +89,7 @@ export default createEslintRule<Options, MessageIds>({
       },
     ],
     messages: {
-      expectNamedCatalog: 'Expect to use name catalog instead of plain specifier or generic catalog, got "{{specifier}}" for package "{{packageName}}. It can be moved to catalog `{{targetCatalog}}`".',
+      expectNamedCatalog: 'Expect to use named catalog instead of plain specifier or generic catalog, got "{{specifier}}" for package "{{packageName}}". It can be moved to catalog `{{targetCatalog}}`.',
     },
   },
   defaultOptions: [{}],
